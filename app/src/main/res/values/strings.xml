@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Application Test1.24.5</string>
+    <string name="title_home">挑战圈</string>
+    <string name="title_profile">个人</string>
+    <string name="title_consult">咨询</string>
+    <string name="title_notifications">商城</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="camera">camera</string>
+</resources>

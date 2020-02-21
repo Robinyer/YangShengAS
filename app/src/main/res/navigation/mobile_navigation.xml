@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.myapplicationtest1245.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+
+    <fragment
+        android:id="@+id/navigation_consult"
+        android:name="com.example.myapplicationtest1245.ui.consult.ConsultFragment"
+        android:label="@string/title_consult"
+        tools:layout="@layout/fragment_consult" >
+        <action
+            android:id="@+id/action_navigation_consult_to_myQuestionnaireFragment"
+            app:destination="@id/myQuestionnaireFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_mall"
+        android:name="com.example.myapplicationtest1245.ui.mall.MallFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_mall" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.myapplicationtest1245.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/myQuestionnaireFragment"
+        android:name="com.example.myapplicationtest1245.ui.consult.MyQuestionnaireFragment"
+        android:label="fragment_my_questionnaire"
+        tools:layout="@layout/fragment_my_questionnaire" >
+        <action
+            android:id="@+id/action_myQuestionnaireFragment_to_navigation_consult"
+            app:destination="@id/navigation_consult" />
+        <action
+            android:id="@+id/action_myQuestionnaireFragment_to_questionnaireTestFragment"
+            app:destination="@id/questionnaireTestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionnaireTestFragment"
+        android:name="com.example.myapplicationtest1245.ui.consult.MyQuestionnaireTestFragment"
+        android:label="fragment_questionnaire_test"
+        tools:layout="@layout/fragment_questionnaire_test" >
+        <action
+            android:id="@+id/action_questionnaireTestFragment_to_myQuestionnaireFragment"
+            app:destination="@id/myQuestionnaireFragment" />
+    </fragment>
+</navigation>

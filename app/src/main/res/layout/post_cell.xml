@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:orientation="vertical">
+
+    <io.supercharge.shimmerlayout.ShimmerLayout
+        android:id="@+id/shimmerLayoutPostCell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frameLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:context=".ui.home.viewpager2.PostFragment">
+
+            <ImageView
+                android:id="@+id/imageViewPostUser"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:adjustViewBounds="false"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_file_download_black_24dp" />
+
+            <TextView
+                android:id="@+id/textViewPostUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="用户名"
+                android:textColor="@color/colorLightBlue"
+                app:layout_constraintStart_toEndOf="@+id/imageViewPostUser"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewPostTips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="热门内容"
+                android:textColor="@color/colorGray"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewPostUserName"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPostUserName" />
+
+            <ImageView
+                android:id="@+id/imageViewExpandMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:srcCompat="@drawable/ic_expand_more_black_24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="#Day11\n可可爱爱的中药材们~"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewPostUser" />
+
+            <ImageView
+                android:id="@+id/imageViewPost"
+                android:layout_width="77dp"
+                android:layout_height="73dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                app:srcCompat="@drawable/ic_file_download_black_24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="409dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewPost" />
+
+            <ImageView
+                android:id="@+id/imageViewLikes"
+                android:layout_width="16dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:srcCompat="@drawable/ic_favorite_border_black_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+            <TextView
+                android:id="@+id/textViewLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="111"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewLikes"
+                app:layout_constraintStart_toEndOf="@+id/imageViewLikes"
+                app:layout_constraintTop_toTopOf="@+id/imageViewLikes" />
+
+            <ImageView
+                android:id="@+id/imageViewSMS"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                app:srcCompat="@drawable/ic_sms_black_24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewLikes"
+                app:layout_constraintStart_toEndOf="@+id/textViewLikes"
+                app:layout_constraintTop_toTopOf="@+id/textViewLikes" />
+
+            <TextView
+                android:id="@+id/textViewComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="111"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewSMS"
+                app:layout_constraintStart_toEndOf="@+id/imageViewSMS"
+                app:layout_constraintTop_toTopOf="@+id/imageViewSMS" />
+
+            <TextView
+                android:id="@+id/textViewLaunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="111"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewLaunch"
+                app:layout_constraintStart_toEndOf="@+id/imageViewLaunch"
+                app:layout_constraintTop_toTopOf="@+id/imageViewLaunch" />
+
+            <ImageView
+                android:id="@+id/imageViewLaunch"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                app:srcCompat="@drawable/ic_launch_black_24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewComments"
+                app:layout_constraintStart_toEndOf="@+id/textViewComments"
+                app:layout_constraintTop_toTopOf="@+id/textViewComments" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </io.supercharge.shimmerlayout.ShimmerLayout>
+</androidx.cardview.widget.CardView>

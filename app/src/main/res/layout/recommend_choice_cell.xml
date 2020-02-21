@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.supercharge.shimmerlayout.ShimmerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".ui.home.viewpager2.RecommendChoiceFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageViewRecommendChoice"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:background="#FFFFFF"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_file_download_black_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewRecommendChoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="功能未完成"
+            android:textColor="#FFFFFF"
+            app:fontFamily="sans-serif-black"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewRecommendChoice"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewRecommendChoice"
+            app:layout_constraintStart_toStartOf="@+id/imageViewRecommendChoice"
+            app:layout_constraintTop_toTopOf="@+id/imageViewRecommendChoice"
+            app:layout_constraintVertical_bias="0.2" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="#AA7EB8"
+            android:src="@android:drawable/ic_menu_add"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewRecommendChoice"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewRecommendChoice"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="@+id/imageViewRecommendChoice"
+            app:layout_constraintTop_toTopOf="@+id/imageViewRecommendChoice"
+            app:layout_constraintVertical_bias="0.9" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</io.supercharge.shimmerlayout.ShimmerLayout>
