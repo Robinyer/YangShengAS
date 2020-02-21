@@ -52,7 +52,7 @@ class ProfileFragment : Fragment() {
         banner2.setImages(arrayOf)
 //        banner.setDelayTime(200)
         banner2.isAutoPlay(true)
-//        banner2.setBannerTitles(arrayListOf<String>("分筋错骨手", "破水火焰手", "肿透半边天"))
+        banner2.setBannerTitles(arrayListOf<String>("分筋错骨手", "破水火焰手", "肿透半边天"))
         banner2.setImageLoader(object : ImageLoader() {
             override fun displayImage(context: Context?, path: Any?, imageView: ImageView?) {
 //                imageView?.setImageURI(path as Uri)
@@ -66,7 +66,7 @@ class ProfileFragment : Fragment() {
         })
         banner2.setIndicatorGravity(BannerConfig.CENTER)
         banner2.setBannerAnimation(Transformer.Default)
-//        banner2.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE)
+        banner2.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE)
         banner2.start()
     }
 
