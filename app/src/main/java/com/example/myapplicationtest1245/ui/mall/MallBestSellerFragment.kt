@@ -2,13 +2,15 @@ package com.example.myapplicationtest1245.ui.mall
 
 
 import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.bumptech.glide.Glide
 import com.example.myapplicationtest1245.R
 import com.youth.banner.BannerConfig
@@ -21,7 +23,7 @@ import kotlinx.android.synthetic.main.fragment_mall_best_seller.*
  * A simple [Fragment] subclass.
  */
 class MallBestSellerFragment : Fragment() {
-
+    private lateinit var bestSellerViewModel: MallBestSellerViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -43,7 +45,7 @@ class MallBestSellerFragment : Fragment() {
         banner.setImages(arrayOf)
 //        banner.setDelayTime(200)
         banner.isAutoPlay(true)
-        banner.setBannerTitles(arrayListOf<String>("分筋错骨手", "破水火焰手", "肿透半边天"))
+//        banner.setBannerTitles(arrayListOf<String>("分筋错骨手", "破水火焰手", "肿透半边天"))
         banner.setImageLoader(object : ImageLoader() {
             override fun displayImage(context: Context?, path: Any?, imageView: ImageView?) {
 //                imageView?.setImageURI(path as Uri)
@@ -57,9 +59,33 @@ class MallBestSellerFragment : Fragment() {
         })
         banner.setIndicatorGravity(BannerConfig.CENTER)
         banner.setBannerAnimation(Transformer.Default)
-        banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE)
+//        banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE)
         banner.start()
 //        banner.dispatchTouchEvent()
+
+
+        val galleryAdapter = MallBestSellerAdapter()
+        recyclerViewBestSeller.apply {
+            adapter = galleryAdapter
+            layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+        }
+
+        bestSellerViewModel = ViewModelProvider(
+            this,
+            ViewModelProvider.AndroidViewModelFactory(requireActivity().application)
+        ).get(MallBestSellerViewModel::class.java)
+        bestSellerViewModel.photoListLive.observe(viewLifecycleOwner, Observer {
+            galleryAdapter.submitList(it)
+//            swipeLayoutGallery.isRefreshing = false
+        })
+
+        bestSellerViewModel.photoListLive.value ?: bestSellerViewModel.fetchData()
+
+//        swipeLayoutGallery.setOnRefreshListener {
+//            bestSellerViewModel.fetchData()
+//        }
+
     }
+
 
 }

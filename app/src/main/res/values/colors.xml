@@ -6,6 +6,6 @@
     <color name="colorActive">#C2185B</color>
     <color name="colorGray">#888888</color>
     <color name="colorDarkGray">#666666</color>
-    <color name="colorLightGray">#EEEEEE</color>
+    <color name="colorLightGrayBackground">#EEEEEE</color>
     <color name="colorLightBlue">#00BCD4</color>
 </resources>

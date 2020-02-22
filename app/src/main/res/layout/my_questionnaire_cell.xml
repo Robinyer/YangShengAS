@@ -67,7 +67,7 @@
                 android:layout_marginRight="8dp"
                 android:background="@color/design_default_color_primary"
                 android:text="开始评估"
-                android:textColor="@color/colorLightGray"
+                android:textColor="@color/colorLightGrayBackground"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textViewQuestionnaireName"
                 app:layout_constraintEnd_toEndOf="parent"
