@@ -43,7 +43,7 @@ class MallBestSellerFragment : Fragment() {
         banner.setImages(arrayOf)
 //        banner.setDelayTime(200)
         banner.isAutoPlay(true)
-//        banner.setBannerTitles(arrayListOf<String>("分筋错骨手", "破水火焰手", "肿透半边天"))
+        banner.setBannerTitles(arrayListOf<String>("分筋错骨手", "破水火焰手", "肿透半边天"))
         banner.setImageLoader(object : ImageLoader() {
             override fun displayImage(context: Context?, path: Any?, imageView: ImageView?) {
 //                imageView?.setImageURI(path as Uri)
@@ -57,7 +57,7 @@ class MallBestSellerFragment : Fragment() {
         })
         banner.setIndicatorGravity(BannerConfig.CENTER)
         banner.setBannerAnimation(Transformer.Default)
-//        banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE)
+        banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE)
         banner.start()
 //        banner.dispatchTouchEvent()
     }
